@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs\clock.png" type="image/x-png">
+    <title>Hora Local</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            font-size: 100px;
+            color: #333;
+        }
+        button{
+            border: #f4f4f9;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hora"></h1>
+
+    <script>
+        
+        function atualizarHora() {
+            
+            const btn = document.getElementById('btn')
+            const now = new Date();  // Cria um objeto Date com o horário atual
+            var hora = now.getHours();  // Obtém a hora
+            let minuto = now.getMinutes();  // Obtém os minutos
+            let segundo = now.getSeconds();  // Obtém os segundos
+
+
+            // Formata para que sempre mostre 2 dígitos, se necessário
+            hora = hora < 10 ? '0' + hora : hora;
+            minuto = minuto < 10 ? '0' + minuto : minuto;
+            segundo = segundo < 10 ? '0' + segundo : segundo;
+
+            // Exibe no elemento h1
+            document.getElementById('hora').textContent = `${hora}:${minuto}:${segundo}`;
+        }
+        
+        // Atualiza a hora a cada segundo
+        setInterval(atualizarHora, 1000);
+        
+        // Chama a função para definir a hora inicial
+        atualizarHora();
+
+        
+    </script>
+
+</body>
+</html>
