@@ -1,0 +1,48 @@
+body{
+    background-image: url('wallpaper_office.jpg');
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;  /* Alinha horizontalmente */
+    align-items: center;  /* Alinha verticalmente */
+    
+}
+
+h1{
+    display: flex;
+    color: rgb(85, 85, 85);
+    text-shadow: 2px 1px rgb(255, 255, 255);
+    font-size: 70px;
+}
+
+#local{
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;  /* Alinha horizontalmente */
+    align-items: center;  /* Alinha verticalmente */
+    display: flex;
+}
+#local2{
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;  /* Alinha horizontalmente */
+    align-items: center;  /* Alinha verticalmente */
+    display: flex;
+}
+
+button{
+    width:200px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 2px black;
+    
+}
+button a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+a {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;         /* Faz o link herdar a cor do texto ao redor */
+}
+#nao{
+    width: 10px;
+    height: 10px;
+    border: none;
+}
